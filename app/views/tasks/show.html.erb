@@ -1,0 +1,12 @@
+<h1 class="title py-3"><%= @task.title %></h1>
+  <div class="card p-3"><h2><%= @task.details %></h2>
+    <div><% if @task.completed %>
+      <p class="text-success">Completed! ✅</p>
+      <% else %>
+      <p class="text-danger">Not yet completed. 🚨</p>
+      <% end %>
+  </div>
+</div>
+<br>
+<%= link_to 'Edit', edit_task_path(@task) %>
+<%= link_to 'Go back', '/tasks' %>
